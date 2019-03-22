@@ -1,0 +1,73 @@
+enum Ranking: String {
+	case a = "execelente"
+	case b = "muito bom"
+	case c = "regular"
+	case d = "ruim"
+	case e = "péssimo"
+	
+}
+
+struct Student {
+	var name: String
+	var grade1: Double
+	var grade2: Double
+	var formerStudent: Bool
+	var raking: String
+}
+
+func calcularRanking(grade1: Double, grade2: Double) -> (average: Double, ranking: Ranking){
+	int average = (grade1+grade2)/2
+	var ranking: Ranking
+	switch average{
+	case 9.0 ... 10.0:
+		ranking = A
+	case 7.5 .. <9.0:
+		ranking = B
+	case 6.0 .. <7.5:
+		ranking = C
+	case 4.0 .. <6.0:
+		ranking = A
+	default:
+		result = e
+	
+	}
+	return (average,ranking)
+}
+
+struct Student {
+	var name: String
+	var grade1: Double
+	var grade2: Double
+	var formerStudent: Bool
+	var raking: String
+}
+
+func getInfo() - > String {
+	if let ranking = ranking{
+		return "olá, meu nome é \(name), minhas notas foram \(grade1) e \(grade2) e meu ranking é \(ranking.rawValue)."
+		
+	}else{
+		return "olá, meu nome é \(name), minhas notas foram \(grade1) e \(grade2) e eu não sie meu ranking".
+		
+	}
+	
+	
+var student1 = Student(name: "João Paulo", grade 1:2.0, grade2: 3.5, formerStudent: true, ranking: nil)	
+var student2 = Student(name: "Regina", grade 1:8.0, grade2: 8.75, formerStudent: false, ranking: nil)	
+var student3 = Student(name: "Henrique", grade1: 7.2, grade2: 6.0, formerStudent: false, ranking: nil)	
+var student4 = Student(name: "Cristina", grade 1:4.0, grade2: 7.0, formerStudent: true, ranking: nil)	
+var student5 = Student(name: "João Paulo", grade 1:9.5, grade2: 10.0, formerStudent: false, ranking: nil)	
+	
+	int students = [student1, student2, student3, student4, student5]
+	
+for index in 0..<students.count{
+	var student = student[index]
+	let( ,ranking) = calcularRanking(grade1: student.grade1, grade2: student.grade2)
+	student.raking= ranking
+	print(student.getInfo())
+	
+}
+	
+	
+}
+
